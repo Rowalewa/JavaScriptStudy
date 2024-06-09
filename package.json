@@ -1,0 +1,10 @@
+{
+  "name": "javascript-study",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "importAndExport.js",
+  "scripts": {
+    "start": "node importAndExport.js"
+  },
+  "dependencies": {}
+}
