@@ -22,3 +22,51 @@ function abTest(a, b) {
     }
 }
 console.log(abTest(2, 2))
+function getGrade(score) {
+    let Grade = ""
+    if (score > 100){
+      Grade = "Grade cannot be assigned to a score greater than 100."
+    } else if (score === 100){
+      Grade = "A++";
+    } else if (score >=90 && score <= 99){
+      Grade = "A";
+    } else if (score >= 80){
+      Grade = "B"
+    } else if (score >= 70){
+      Grade = "C";
+    } else if (score >= 60){
+      Grade = "D"
+    } else if (score >= 0){
+      Grade = "F"
+    } else {
+      Grade = "Grade cannot be assigned to a negative score. Failed"
+    }
+    return Grade;
+  
+  }
+  
+  console.log(getGrade(96));
+  console.log(getGrade(82));
+  console.log(getGrade(59));
+  function hasPassingGrade(score) {
+    if (getGrade(score) !== "F"){
+      return true;
+    } else {
+      return false;
+    }
+    
+  }
+  
+  
+  console.log(hasPassingGrade(100));
+  console.log(hasPassingGrade(53));
+  console.log(hasPassingGrade(87));
+  function studentMsg(totalScores, studentScore) {
+  if (hasPassingGrade(studentScore)){
+    return "Class average: " + getAverage(totalScores) + ". Your grade: " +getGrade(studentScore) + ". You passed the course.";
+  }else{
+    return "Class average: " + getAverage(totalScores) + ". Your grade: " +getGrade(studentScore) + ". You failed the course.";
+  }
+
+}
+console.log(studentMsg([92, 88, 12, 77, 57, 100, 67, 38, 97, 89], 37));
