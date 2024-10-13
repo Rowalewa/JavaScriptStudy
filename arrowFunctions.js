@@ -36,3 +36,4 @@ const total = (function () {
     };
 })();
 console.log(total(1, 2,3));
+// arrowFunctions have no function names, functions are assigned to varibles instead.
